@@ -13,7 +13,9 @@ public class Interface {
                 caesar();
                 break;
             } else  if (choice.equalsIgnoreCase("BF")){
-                bruteForce();
+                System.out.println("Введите путь к файлу в формате: \"C:\\User\\...\\text.txt\"");
+                BruteForce.bruteForce();
+                System.out.println("Вы можете посмотреть результат в файле \"Result/Decrypted_by_BF.txt\"");
                 break;
             } else {
                 System.out.println("Выберите одно из предложенных действий");
@@ -30,18 +32,16 @@ public class Interface {
             if (choice.equalsIgnoreCase("Encrypt")) {
                 System.out.println("Введите путь к файлу в формате: \"C:\\User\\...\\text.txt\"");
                 Reader.encrypt();
-                System.out.println("Вы можете посмотреть результат в файле \"Text/Result.txt\"");
+                System.out.println("Вы можете посмотреть результат в файле \"Text/Encrypted_by_Caesar.txt\"");
                 break;
             } else if (choice.equalsIgnoreCase("Decrypt")) {
                 System.out.println("Введите путь к файлу в формате: \"C:\\User\\...\\text.txt\"");
                 Reader.decrypt();
-                System.out.println("Вы можете посмотреть результат в файле \"Text/Result.txt\"");
+                System.out.println("Вы можете посмотреть результат в файле \"Text/Decrypted_by_Caesar.txt\"");
                 break;
             } else {
                 System.out.println("Выберите одно из предложенных действий");
             }
         }
-    }
-    public static void bruteForce () {
     }
 }

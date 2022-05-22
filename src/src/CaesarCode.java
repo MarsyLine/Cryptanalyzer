@@ -19,9 +19,9 @@ public class CaesarCode {
                                                                                           ':', '-', ' ', '"'));
     public static char getSymbol (int key) {
         if (key > alphabet.size() - 1) {
-            key = key - alphabet.size();
+            key = (key - alphabet.size());
         } else if (key < 0) {
-            key = key + alphabet.size();
+            key = (key + alphabet.size());
         }
         return alphabet.get(key);
     }
@@ -30,5 +30,8 @@ public class CaesarCode {
     }
     public static int indexOf (char symbol) {
         return alphabet.indexOf(symbol);
+    }
+    public static int size () {
+        return alphabet.size();
     }
 }

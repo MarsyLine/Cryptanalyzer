@@ -5,11 +5,11 @@ public class Reader {
     public static void encrypt() {
         try (Scanner console = new Scanner(System.in);
              BufferedReader read = new BufferedReader(new FileReader(console.nextLine()));
-             BufferedWriter write = new BufferedWriter(new FileWriter("Text/Result.txt"))) {
+             BufferedWriter write = new BufferedWriter(new FileWriter("Result/Encrypted_by_Caesar.txt"))) {
             while (read.ready()) {
                 char symbol = (char)read.read();
                 if (CaesarCode.contains(symbol)) {
-                    symbol = CaesarCode.getSymbol(CaesarCode.indexOf(symbol) + 3);
+                    symbol = CaesarCode.getSymbol(CaesarCode.indexOf(symbol) - 20);
                     write.append(symbol);
                 } else {
                     write.append(symbol);
@@ -23,11 +23,11 @@ public class Reader {
     public static void decrypt() {
         try (Scanner console = new Scanner(System.in);
              BufferedReader read = new BufferedReader(new FileReader(console.nextLine()));
-             BufferedWriter write = new BufferedWriter(new FileWriter("Text/Result.txt"))) {
+             BufferedWriter write = new BufferedWriter(new FileWriter("Result/Decrypted_by_Caesar.txt"))) {
             while (read.ready()) {
                 char symbol = (char)read.read();
                 if (CaesarCode.contains(symbol)) {
-                    symbol = CaesarCode.getSymbol(CaesarCode.indexOf(symbol) - 3);
+                    symbol = CaesarCode.getSymbol(CaesarCode.indexOf(symbol) + 20);
                     write.append(symbol);
                 } else {
                     write.append(symbol);
