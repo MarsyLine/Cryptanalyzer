@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 public class ChangeSymbol {
-    public static char SymbolsUp (BufferedReader read, int key) {
+    public static char symbolsUp (BufferedReader read, int key) {
         char symbol = 0;
         try {
             symbol = (char)read.read();
@@ -15,7 +15,7 @@ public class ChangeSymbol {
             return symbol;
         }
     }
-    public static char SymbolsDown (BufferedReader read, int key) {
+    public static char symbolsDown (BufferedReader read, int key) {
         char symbol = 0;
         try {
             symbol = (char)read.read();

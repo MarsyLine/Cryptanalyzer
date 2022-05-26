@@ -8,7 +8,7 @@ public class CaesarCode {
              BufferedWriter write = new BufferedWriter(new FileWriter("Result/Encrypted_by_Caesar.txt"))) {
             int key = console.nextInt();
             while (read.ready()) {
-                write.append(ChangeSymbol.SymbolsUp(read, key));
+                write.append(ChangeSymbol.symbolsUp(read, key));
             }
         }
         catch (IOException error) {
@@ -21,7 +21,7 @@ public class CaesarCode {
              BufferedWriter write = new BufferedWriter(new FileWriter("Result/Decrypted_by_Caesar.txt"))) {
             int key = console.nextInt();
             while (read.ready()) {
-                write.append(ChangeSymbol.SymbolsDown(read, key));
+                write.append(ChangeSymbol.symbolsDown(read, key));
             }
         }
         catch (IOException error) {

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ProgramRun {
 
     public static String wrongAction = "Выберите одно из предложенных действий";
-    public static String way = "Введите путь к файлу в формате: \"C:\\User\\...\\text.txt\"";
+    public static String path = "Введите путь к файлу в формате: \"C:\\User\\...\\text.txt\"";
     public static String result = "Вы можете посмотреть результат в файле";
 
     public static void startProgram () {
@@ -18,7 +18,7 @@ public class ProgramRun {
                 caesar();
                 break;
             } else  if (choice.equalsIgnoreCase("BF")){
-                System.out.println(way);
+                System.out.println(path);
                 BruteForce.bruteForce();
                 System.out.println(result + " \"Result/Decrypted_by_BF.txt\"");
                 break;
@@ -35,12 +35,12 @@ public class ProgramRun {
         while (true) {
             String choice = console.nextLine();
             if (choice.equalsIgnoreCase("Encrypt")) {
-                System.out.println(way + " и ключ");
+                System.out.println(path + " и ключ");
                 CaesarCode.encrypt();
                 System.out.println(result + " \"Text/Encrypted_by_Caesar.txt\"");
                 break;
             } else if (choice.equalsIgnoreCase("Decrypt")) {
-                System.out.println(way + " и ключ");
+                System.out.println(path + " и ключ");
                 CaesarCode.decrypt();
                 System.out.println(result + " \"Text/Decrypted_by_Caesar.txt\"");
                 break;

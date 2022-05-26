@@ -17,7 +17,7 @@ public class BruteForce {
                  StringBuilder symbols = new StringBuilder();
             for (int i = 0; i < 50; i++) {
                 if (read.ready()) {
-                    symbols.append(ChangeSymbol.SymbolsUp(read, key));
+                    symbols.append(ChangeSymbol.symbolsUp(read, key));
                 } else {
                     break;
                 }
@@ -32,7 +32,7 @@ public class BruteForce {
         try (BufferedReader read = new BufferedReader(new FileReader(path));
              BufferedWriter write = new BufferedWriter(new FileWriter("Result/Decrypted_by_BF.txt"))) {
             while (read.ready()) {
-                write.append(ChangeSymbol.SymbolsUp(read, step));
+                write.append(ChangeSymbol.symbolsUp(read, step));
             }
         }
         catch (IOException error) {
